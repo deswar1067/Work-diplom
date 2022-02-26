@@ -1,7 +1,7 @@
 import json
 # import time
 
-from main_request_pet import *
+from Work-diplom.main_request_pet import *
 
 
 def test_create_pet():
