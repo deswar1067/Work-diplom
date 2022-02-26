@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-from WD.base_page import BasePage
+from base_page import BasePage
 
 
 class Locator_GR1:
@@ -103,7 +103,6 @@ class MainPage(BasePage):
         checkboxes[-1].click()
         select = Select(self.find_element((By.NAME, 'action')))
         select.select_by_value('delete_selected')
-        # self.find_element((By.XPATH, '//*[@id="changelist-form"]/div[1]/label/select/option[2]')) # не работает delete selected post
         self.find_element((By.NAME, 'index')).click()
         self.find_element((By.CSS_SELECTOR, '#content > form > div > input[type=submit]:nth-child(4)')).click()
 

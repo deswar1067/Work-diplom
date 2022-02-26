@@ -30,6 +30,6 @@ def logout(url):
     return response
 
 
-def delete_user(url, user_name):
-    response = requests.delete(url, json={'username': user_name})
+def delete_user(url):
+    response = requests.delete(url)
     return response

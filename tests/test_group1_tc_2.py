@@ -1,4 +1,4 @@
-from WD.main_page_local import MainPage, Data
+from main_page_local import MainPage, Data
 
 
 def test_admin_page(browser):
@@ -25,5 +25,9 @@ def test_user_in_group(create_connection):
     # bb = [x[0] for x in b]
     # print(bb)
     assert str(a) in str(b)
+
+
+if __name__ == '__main__':
+    print('Let`s go!')
 
 

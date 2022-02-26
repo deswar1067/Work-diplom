@@ -1,4 +1,4 @@
-from WD.main_page_local import MainPage
+from main_page_local import MainPage
 
 
 def test_admin_page(browser):
@@ -24,7 +24,7 @@ def test_regist_page(browser):
 def test_availability_group(browser, create_connection):
     """Проверка, что группа отображается созданная в базе данных"""
     cursor = create_connection
-    cursor.execute("INSERT INTO auth_group(id, name) VALUES(4,'varf')")
+    cursor.execute("INSERT INTO auth_group(id, name) VALUES(5,'varf')")
 
     page = MainPage(browser, 'http://localhost:8000/')
     page.open_main_page()

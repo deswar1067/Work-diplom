@@ -1,6 +1,5 @@
-import time
 
-from WD.main_page_local import MainPage
+from main_page_local import MainPage
 
 
 def test_delete_post(browser):
@@ -10,4 +9,3 @@ def test_delete_post(browser):
     page.regist_page()
     page.post_page().click()
     page.delete_post()
-    time.sleep(5)
