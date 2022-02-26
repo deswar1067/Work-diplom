@@ -1,7 +1,7 @@
 # import pytest
 import time
 
-from jenkins_home.workspace.Diplom_test.main_request_user import *
+from workspace.Diplom_test.main_request_user import *
 
 
 def test_create_user():
