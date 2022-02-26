@@ -14,6 +14,7 @@ def browser():
     driver = webdriver.Chrome(chrome_options=chrome_options)
     # driver = webdriver.Chrome('/usr/bin/chromedriver')
     driver.maximize_window()
+    driver.implicitly_wait(5)
 
     yield driver
 
