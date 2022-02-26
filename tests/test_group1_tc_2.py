@@ -1,4 +1,4 @@
-from main_page_local import MainPage, Data
+from tests.main_page_local import MainPage, Data
 
 
 def test_admin_page(browser):
