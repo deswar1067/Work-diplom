@@ -37,4 +37,3 @@ def create_connection():
     except Error as e:
         print(f'Connection error "{e}" occured')
 
-
