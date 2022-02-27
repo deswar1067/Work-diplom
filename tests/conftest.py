@@ -31,7 +31,7 @@ def create_connection():
         cursor.close()
         connection.close()
         print("Connection to Postgres DB seccessful")
-        # return cursor
+        return cursor
 
     # except Error as e:
     #     print(f'Connection error "{e}" occured')
