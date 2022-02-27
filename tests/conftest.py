@@ -1,6 +1,6 @@
 import psycopg2
 import pytest
-# from psycopg2 import Error
+from psycopg2 import Error
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from selenium import webdriver
 
@@ -12,9 +12,9 @@ def browser():
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-gpu')
     driver = webdriver.Chrome(chrome_options=chrome_options)
-    # driver = webdriver.Chrome('/usr/bin/chromedriver')
+    # driver = webdriver.Chrome('/usr/local/bin/chromedriver')
     driver.maximize_window()
-    driver.implicitly_wait(5)
+   
 
     yield driver
 
@@ -23,7 +23,7 @@ def browser():
 
 @pytest.fixture
 def create_connection():
-    # try:
+    try:
         connection = psycopg2.connect(dbname='postgres', user='postgres', password='postgres', host='localhost')
         connection.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
         cursor = connection.cursor()
@@ -31,9 +31,9 @@ def create_connection():
         cursor.close()
         connection.close()
         print("Connection to Postgres DB seccessful")
-        # return cursor
+        return cursor
 
-    # except Error as e:
-    #     print(f'Connection error "{e}" occured')
+    except Error as e:
+        print(f'Connection error "{e}" occured')
 
 
