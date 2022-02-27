@@ -1,7 +1,4 @@
-import sys
-from main_page_local import MainPage
-
-sys.path.append('../')
+from ..main_page_local import MainPage
 
 
 def test_admin_page(browser):
