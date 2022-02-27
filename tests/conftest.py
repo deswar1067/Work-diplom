@@ -23,7 +23,6 @@ def browser():
 
 @pytest.fixture
 def create_connection():
-    global cursor
     try:
         connection = psycopg2.connect(dbname='postgres', user='postgres', password='postgres', host='localhost')
         connection.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
@@ -37,4 +36,4 @@ def create_connection():
     except Error as e:
         print(f'Connection error "{e}" occured')
 
-    return cursor
+
