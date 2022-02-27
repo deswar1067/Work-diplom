@@ -4,7 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class BasePage:
 
-    def __init__(self, driver, url="http://host.docker.internal:8000/"):
+    def __init__(self, driver, url=""):
         self.driver = driver
         self.url = url
 
