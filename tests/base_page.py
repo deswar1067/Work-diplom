@@ -4,7 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class BasePage:
 
-    def __init__(self, driver, url=""):
+    def __init__(self, driver, url="http://0.0.0.0:8000/"):
         self.driver = driver
         self.url = url
 
