@@ -1,1 +1,5 @@
 pytest
+psycopg2-binary
+selenium
+allure-pytest
+requests
