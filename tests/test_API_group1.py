@@ -1,7 +1,7 @@
 # import pytest
 import time
 
-from main_request_user import *
+from ..main_request_user import *
 
 
 def test_create_user():

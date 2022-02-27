@@ -1,4 +1,4 @@
-from main_page_local import MainPage, Data
+from ..main_page_local import MainPage, Data
 
 
 def create_group(create_connection):
