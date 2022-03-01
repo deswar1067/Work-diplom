@@ -1,5 +1,5 @@
 
-from ..main_page_local import MainPage, main_page
+from main.main_page_local import MainPage, main_page
 
 
 def test_delete_post(browser):
