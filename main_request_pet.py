@@ -3,21 +3,8 @@ import requests
 
 def new_pets(url):
     response = requests.post(url, json={
-        "id": 938,
-        "category": {
-            "id": 22,
-            "name": "fish"
-        },
+        "id": 940,
         "name": "golden-fish",
-        "photoUrls": [
-            "None"
-        ],
-        "tags": [
-            {
-                "id": 1113,
-                "name": "fish-tags"
-            }
-        ],
         "status": "available"
     })
     return response

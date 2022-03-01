@@ -1,4 +1,4 @@
-from ..main_page_local import MainPage, Data
+from ..main_page_local import MainPage, Data, main_page
 
 
 def create_group(create_connection):
@@ -7,7 +7,7 @@ def create_group(create_connection):
 
 def test_user_two_page(browser):
     """Создаем нового пользователя и заходим под его профилем"""
-    page = MainPage(browser, 'http://localhost:8000/')
+    page = MainPage(browser, main_page)
     page.open_main_page()
     page.admin_page().click()
     page.regist_page()

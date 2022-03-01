@@ -1,9 +1,9 @@
-from ..main_page_local import MainPage
+from ..main_page_local import MainPage, main_page
 
 
 def test_admin_page(browser):
     """Проверка отображения главной страницы """
-    page = MainPage(browser, 'http://localhost:8000/')
+    page = MainPage(browser, main_page)
     page.open_main_page()
     a = page.admin_page().text
     page.admin_page().click()
@@ -13,7 +13,7 @@ def test_admin_page(browser):
 
 def test_regist_page(browser):
     """Вход в админику"""
-    page = MainPage(browser, 'http://localhost:8000/')
+    page = MainPage(browser, main_page)
     page.open_main_page()
     page.admin_page().click()
     welcome = page.regist_page()
@@ -26,7 +26,7 @@ def test_availability_group(browser, create_connection):
     cursor = create_connection
     cursor.execute("INSERT INTO auth_group(id, name) VALUES(5,'varf')")
 
-    page = MainPage(browser, 'http://localhost:8000/')
+    page = MainPage(browser, main_page)
     page.open_main_page()
     page.admin_page().click()
     page.regist_page()

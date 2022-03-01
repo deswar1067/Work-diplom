@@ -3,6 +3,8 @@ from selenium.webdriver.support.select import Select
 
 from .base_page import BasePage
 
+main_page = "http://localhost:8000/"
+
 
 class Locator_GR1:
     locator_admin = (By.CSS_SELECTOR, "body > main > section > div > p:nth-child(3) > a")

@@ -1,9 +1,9 @@
-from ..main_page_local import MainPage, Data
+from ..main_page_local import MainPage, Data, main_page
 
 
 def test_admin_page(browser):
     """Создадим пользователя и добавим его в группу"""
-    page = MainPage(browser, 'http://localhost:8000/')
+    page = MainPage(browser, main_page)
     page.open_main_page()
     page.admin_page().click()
     page.regist_page()
