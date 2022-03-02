@@ -1,4 +1,4 @@
-pytest
+pytest-rerunfailures
 psycopg2-binary
 selenium
 allure-pytest
