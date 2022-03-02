@@ -113,28 +113,4 @@ class MainPage(BasePage):
         nav_bar_menu = [x.text for x in data_user if len(x.text) > 0]
         return nav_bar_menu
 
-    # def cart_page(self):
-    #     self.find_element(Locator.locator_two).click()
-    #     search_card = self.find_element(Locator.locator_tree).text
-    #     return search_card
-    #
-    # def card_empty(self):
-    #     self.find_element(Locator.locator_two).click()
-    #     search_empty = self.find_element(Locator.locator_empty).text
-    #     return search_empty
-    #
-    # def admin_page(self):
-    #     self.find_element(Locator.locator_login).click()
-    #     login_page = self.find_element(Locator.locator_login_confirm).text
-    #     return login_page
-    #
-    # def closes(self):
-    #     all_list = self.find_elements(Locator.locator_closes)
-    #     nav_bar_menu = [x.text for x in all_list if len(x.text) > 0]
-    #     return nav_bar_menu
-
-    # def check_navigation_bar(self):
-    #     all_list = self.find_elements(Locator.locator_One, time=2)
-    #     nav_bar_menu = [x.text for x in all_list if len(x.text) > 0]
-    #     print(nav_bar_menu)
-    #     return nav_bar_menu
+    
