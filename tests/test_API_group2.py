@@ -26,6 +26,7 @@ def test_search_name():
     """Поиск обновленного питомца"""
     response = update_name("https://petstore.swagger.io/v2/pet/940")
     name = json.loads(response.text)
+    print(name)
     assert name["name"] in "swordfish"
 
 
